@@ -6,4 +6,4 @@
           name: kernel
           state: latest
         become: yes
-        become_method: sduo  
+        become_method: sudo
