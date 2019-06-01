@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Install 1 package 
+      package:
+        name:
+        state:
+      become: yes
+      become_method: sudo
