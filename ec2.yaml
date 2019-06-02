@@ -1,0 +1,12 @@
+---
+- name: Creates ec2 instance
+  hosts: loclahost
+  tasks:
+    - name: Create Instance
+      ec2:
+      key_name: mykey
+      instance_type: t2.medium
+      image: ami-0791c4a97b93a0141
+      count: 3
+      vpc_subnet_id: subnet-vpc-47cfd12f
+      
