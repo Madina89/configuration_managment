@@ -10,6 +10,6 @@
   tasks: 
     - name: Download 1 Package
       get_url:
-        url: ""
+        url: "{{URL}}"
         dest: /tmp/
         
