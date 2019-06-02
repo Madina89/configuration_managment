@@ -7,7 +7,10 @@
   - name: URL
     promt: "Give me the url:"
     private: no
-  tasks: 
+  -name: Destination
+   promt:"Give me the location to put:"
+   private: no
+tasks: 
     - name: Download 1 Package
       get_url:
         url: "{{URL}}"
