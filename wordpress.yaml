@@ -23,8 +23,6 @@
   
     - name: Install epel-release
       shell: "sudo wget -q http://rpms.remirepo.net/enterprise/remi-release-7.rpm"
-    - name: Install all php70 packages
-      shell: "sudo yum install php70u php70u-pdo php70u-mysqlnd php70u-opcache php70u-xml php70u-gd php70u-devel php70u-mysql mixed"
     - name: config manager enabled 
       shell: "sudo yum-config-manager --enable remi-php70"
     - name : update httpd PHP 
