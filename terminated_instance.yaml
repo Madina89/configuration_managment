@@ -11,6 +11,6 @@
   tasks:
    - name: terminate instances
      ec2: 
-       instance_ids: "{{ID}}"
+       instance_ids: "i-0335ca2d1109bde80"
        state: absent  #stopped  #started 
        region: us-east-2
