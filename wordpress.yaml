@@ -11,11 +11,11 @@
       with_items:
        - wget 
        - unzip
-       - php-gd
        - httpd  
+       - php
+       - php-gd
        - mysql
        - mariadb-server
-       - php 
        - php-mysql
        - php-fpm
       ignore_errors: true
@@ -54,11 +54,4 @@
       become: yes
       become_method: sudo
         
-    - name: Start httpd
-      systemd:
-        name: httpd
-        state: restarted 
-        enabled: yes
-      become: yes
-      become_method: sudo
          
