@@ -3,7 +3,7 @@
     become: yes
     become_method: sudo
     tasks:
-      - name: update kernel
+      - name: update kernel to latest 
         when: ansible_distribution == "CentOS" 
         package:
           name: kernel
