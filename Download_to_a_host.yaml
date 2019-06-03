@@ -7,7 +7,10 @@
     - name: DESTINATION
       prompt: "Give me the location to put:"
       private: no
-  hosts: all
+    - name: HOSTS
+      prompt: "Which host?"
+      private: no
+  hosts: "{{HOSTS}}"
   become: yes
   become_method: sudo
   tasks: 
@@ -15,4 +18,3 @@
       get_url:
         url: "{{URL}}" 
         dest : "{{DESTINATION}}"
-        
