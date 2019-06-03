@@ -1,5 +1,5 @@
 --- # This is to update the CentOS machine ignore the Debian and Ubuntu.
-  - hosts: instance
+  - hosts: Instance
     tasks:
       - name: update kernel
         when: ansible_distribution == "CentOS" 
