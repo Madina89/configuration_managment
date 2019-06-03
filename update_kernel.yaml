@@ -1,13 +1,15 @@
 --- # This is to update the CentOS machine ignore the Debian and Ubuntu.
   - hosts: instance
     tasks:
-      - name: update kernel to latest 
+      - name: update kernel
         when: ansible_distribution == "CentOS" 
         package:
           name: kernel
           state: latest
         become: yes
         become_method: sudo
-        reboot:
+      - name: restart the system
+        when: ansible_distribution == "CentOS"
+        reboot: yes  
 
 
