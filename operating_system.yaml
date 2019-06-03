@@ -4,7 +4,7 @@
     - name: Launch CentOS7
       ec2:
         aws_region: us-east-2
-        image: i-04700081205cbb629
+        image: ami-0791c4a97b93a0141
         instance_type: t2.micro
         instance_tags:
           Name: CentOS7
