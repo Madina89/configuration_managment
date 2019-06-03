@@ -15,6 +15,18 @@
         key_name: Ansible_Tower_Key
 
 
+    - name: update kernel to latest 
+      when: ansible_distribution == "CentOS" 
+      package:
+        Name: kernel
+        state: latest
+
+    - name: restart the system
+      when: ansible_distribution == "CentOS"
+      reboot: 
+
+
+
 
     - name: Launch Ubuntu-18.04
       ec2:
