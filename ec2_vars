@@ -1,5 +1,5 @@
 key_name:      "Ansible_Tower_Key"
-instance_type: "t2.micro"
+instance_type: "t2.medum"
 image:         "ami-0791c4a97b93a0141"
 count:         "3"
 vpc_subnet_id: "subnet-62ba1d2e"
