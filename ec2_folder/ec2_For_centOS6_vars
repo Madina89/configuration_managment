@@ -1,0 +1,6 @@
+key_name:      "Ansible_Tower_Key"
+instance_type: "t2.medum"
+image:         "ami-0f2b4fc905b0bd1f1"
+count:         "3"
+vpc_subnet_id: "subnet-62ba1d2e
+region:        "us-east-2"
