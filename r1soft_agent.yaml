@@ -22,4 +22,4 @@
 
         - name: Get key
           shell: "r1soft-setup --get-key http://r1soft.acirrustech.com"  
-        when: ansible_disribution == "CentOS"  
+          when: ansible_disribution == "CentOS"  
