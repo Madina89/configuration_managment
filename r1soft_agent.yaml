@@ -45,6 +45,7 @@
           service: 
             name: cdp-agent
             state: restarted
+          notify: R1SOFT_INSTALLED_ON_CENTOS6 
         - name: Get key
           shell: "r1soft-setup --get-key http://r1soft.acirrustech.com"
         when: ansible_distribution == "CentOS" and ansible_distribution_major_version == "6"
@@ -67,6 +68,7 @@
           systemd: 
             name: sbm-agent
             state: restarted
+          notify: R1SOFT_INSTALLED_ON_CENTOS8
         - name: Get key
           shell: "r1soft-setup --get-key http://r1soft.acirrustech.com"
         when: ansible_distribution == "CentOS" and ansible_distribution_major_version == "8"
@@ -89,6 +91,7 @@
           service: 
             name: cdp-agent
             state: restarted
+          notify: R1SOFT_INSTALLED_ON_FEDORA_28
         - name: Get key
           shell: "r1soft-setup --get-key http://r1soft.acirrustech.com"
         when: ansible_distribution == "Fedora" and ansible_distribution_major_version == "28"
@@ -106,7 +109,11 @@
       - name: R1SOFT_INSTALLED_ON_CENTOS_8
         systemd:
           name: sbm-agent
-          state: restarted       
+          state: restarted  
+      - name: R1SOFT_INSTALLED_ON_FEDORA_28
+        systemd:
+          name: sbm-agent
+          state: restarted          
 
 
 
