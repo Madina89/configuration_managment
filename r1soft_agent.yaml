@@ -36,7 +36,7 @@
              state: latest
 
          - name: Start agent
-           systemd:
+           service:
             name: cdp-agent
             state: restarted  
 
