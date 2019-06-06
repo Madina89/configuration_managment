@@ -12,7 +12,7 @@
         - name: Install r1soft agent
           package:
             name: serverbackup-enterprise-agent 
-            state: lateset
+            state: latest
 
         - name: Start agent
           systemd:
