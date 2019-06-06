@@ -2,7 +2,7 @@
 - name: Creates ec2 instances
   hosts: localhost
   vars_files:
-    - ec2_vars
+    - ec2_vars_file
   tasks:
     - name: Creates CentOS7 instance
       ec2:
