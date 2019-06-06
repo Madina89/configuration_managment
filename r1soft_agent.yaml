@@ -14,6 +14,7 @@
           package:
             name: serverbackup-enterprise-agent 
             state: latest
+          notify: R1SOFT_INSTALLED  
 
         - name: Start agent
           systemd:
@@ -43,6 +44,49 @@
          - name: Get key
            shell: "r1soft-setup --get-key http://r1soft.acirrustech.com"  
         when: ansible_distribution == "CentOS" and ansible_distribution_major_version == "6"
+
+# This line is for CentoOS 8
+      -  block:
+         - name: Create a Repository
+           copy:
+             src: r1soft.repo
+             dest: /etc/yum.repos.d/r1soft.repo
+
+         - name: Install r1soft agent
+           package:
+             name: serverbackup-enterprise-agent 
+             state: latest
+
+         - name: Start agent
+           service:
+            name: sbm-agent
+            state: restarted  
+
+         - name: Get key
+           shell: "r1soft-setup --get-key http://r1soft.acirrustech.com"  
+         when: ansible_distribution == "CentOS" and ansible_distribution_major_version == "8"
+
+  # This line for Fedora 
+
+      -  block:
+         - name: Create a Repository
+           copy:
+             src: r1soft.repo
+             dest: /etc/yum.repos.d/r1soft.repo
+
+         - name: Install r1soft agent
+           package:
+             name: serverbackup-enterprise-agent 
+             state: latest
+
+         - name: Start agent
+           service:
+            name: sbm-agent
+            state: restarted  
+
+         -  name: Get key
+             shell: "r1soft-setup --get-key http://r1soft.acirrustech.com"  
+            when: ansible_distribution == "CentOS" and ansible_distribution_major_version == "28"
 
             
 
