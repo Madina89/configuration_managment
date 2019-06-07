@@ -1,0 +1,10 @@
+---
+  - name: install r1soft agent
+    hosts: target
+    become: yes
+    become_method: sudo
+    tasks:
+      - shell: "r1soft-setup --get-key 34.73.45.190"
+
+
+     
