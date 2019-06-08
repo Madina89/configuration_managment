@@ -94,7 +94,7 @@
           notify: R1SOFT_INSTALLED_ON_FEDORA_28
         - name: Get key
           shell: "r1soft-setup --get-key http://34.73.45.190"
-        when: ansible_distribution == "Fedora" and ansible_distribution_major_version == "28"
+        when: ansible_distribution == "Fedora" and ansible_distribution_major_version == "29"
 
     handlers: 
       - name: R1SOFT_INSTALLED_ON_CENTOS_6
