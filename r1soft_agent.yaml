@@ -106,7 +106,7 @@
           name: sbm-agent
           state: restarted  
           handlers: 
-      #- name: R1SOFT_INSTALLED_ON_CENTOS_8
+      - name: R1SOFT_INSTALLED_ON_CENTOS_8
         systemd:
           name: sbm-agent
           state: restarted  
