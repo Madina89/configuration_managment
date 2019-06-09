@@ -1,6 +1,6 @@
 ---
 - name: Install filebeat
-  hosts:
+  hosts: all
   become: yes
   become_method: root
   tasks:
