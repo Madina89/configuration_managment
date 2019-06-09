@@ -2,7 +2,7 @@
 - name: Install filebeat
   hosts: all
   become: yes
-  become_method: root
+  become_user: root
   tasks:
     - block:
       - name: Install filebeat repo on centos 6
