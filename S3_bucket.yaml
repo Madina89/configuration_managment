@@ -3,7 +3,7 @@
   hosts: localhost
   become: yes
   become_method: sudo
-  task:
+  tasks:
     - name: Create an empty bucket
       s3_bucket:
         name: mys3bucket
