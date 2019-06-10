@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  become: yes
+  become_method: sudo
+- name: Create an empty bucket
+  aws_s3:
+    bucket: Madina
+    mode: create
