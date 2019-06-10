@@ -1,11 +1,11 @@
 ---
 - name: Create empty bcuket
-  hosts: localhost
+  hosts: all
   become: yes
   become_method: sudo
   tasks:
     - name: Create an empty bucket
       s3_bucket:
-        name: mys3bucket
-        
+        bucket: "{{bucket}}"
+        mode: "{{mode}}"
     
