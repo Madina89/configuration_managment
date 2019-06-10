@@ -6,6 +6,6 @@
   task:
     - name: Create an empty bucket
       s3_bucket:
-        bucket: mys3bucket
+        name: mys3bucket
         
     
