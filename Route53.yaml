@@ -9,3 +9,6 @@
         type: A
         ttl: 3600
         value: "{{ ip_value }}"
+
+
+        
