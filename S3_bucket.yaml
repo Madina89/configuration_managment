@@ -5,7 +5,7 @@
   become_method: sudo
   task:
     - name: Create an empty bucket
-      aws_s3:
-      bucket: mys3bucket
-      mode: create
+      s3:
+        bucket: mys3bucket
+        mode: create
     
