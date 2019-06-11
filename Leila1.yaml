@@ -1,11 +1,15 @@
----
-- name: volume_id
-  hosts: all
+- hosts: all
+  # connection: local
   become: yes
-  become_user: root
-  gather_facts: False
-  tasks:
-  local_action:
-     ec2_snapshot:
-     volume_id: “{{vol-3bca8f4d}}”
-     description: “{{snapshot of volume}}”
+  become_method: sudo
+  gather_facts: yes
+  # any_errors_fatal: True
+
+- name: Take snapshots of all volume"
+  ec2_snapshot:
+      volume_id: "{{item.id}}"
+      description: "Taken on {{ ansible_date_time.date }}"
+  #     snapshot_tags:
+  #         frequency: hourly
+  # with_items: "{{ aws_ec2_vol_setting }}"
+  
