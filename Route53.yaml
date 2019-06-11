@@ -5,7 +5,7 @@
       route53:
         state: "{{ state }}"  # present will create , absent will remove
         zone: "{{ domain_name }}" # zone to moidfy the domain name
-        record: "{{dns_record}}" # DNS record to create or delete
+        record: "{{localhost}}" # DNS record to create or delete
         type: "{{type}}" # The type of the DNS
         ttl: "{{ttl}}" # Time to Live is a setting for each DNS record that specifies how long a resolver is supposed to cache.
         value: "{{ ip_value }}" # Value is your IP address.
