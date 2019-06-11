@@ -1,10 +1,9 @@
 ---
-- name: How To Delete a Bucket
-  hosts: all
-  become: yes
-  become_method: sudo
+- name: Delete The S3 Bucket You Created
+  hosts: localhost
+  vars_files:
   tasks:
-    - name: Delete a bucket
+    - name: Delete an s3 bucket
       s3-bucket:
         bucket: "{{bucket}}"
         mode: "{{delete}}"
