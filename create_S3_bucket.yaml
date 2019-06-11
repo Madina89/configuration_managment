@@ -1,11 +1,14 @@
 ---
 - name: Create S3 bcuket
   hosts: localhost
-  become: yes
-  become_method: sudo
+  vars_files:
+    - Madinas_bucket
   tasks:
     - name: Create an empty bucket
-      s3_bucket:
-        bucket: "{{bucket}}"
-        mode: "{{mode}}"
+      aws_s3:
+      aws_access_key: "{{access_key}"
+      aws_secret_key: "{{secret_key}}"
+      bucket: "{{bucketname}}"
+      mode: create
+      permission: public-read
     
