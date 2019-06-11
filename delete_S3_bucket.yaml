@@ -1,9 +1,7 @@
 ---
-- name: Delete The S3 Bucket You Created
-  hosts: localhost
-  vars_files:
-  tasks:
-    - name: Delete an s3 bucket
-      s3-bucket:
-        bucket: "{{bucket}}"
-        mode: "{{delete}}"
+
+- name: Create an empty bucket
+  aws_s3:
+    bucket: "{{mybucket}}"
+    mode: "{{create}}"
+    permission: public-read
