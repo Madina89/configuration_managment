@@ -6,10 +6,10 @@
   # any_errors_fatal: True
 
 - name: Take snapshots of all volume"
+  local_action:
   ec2_snapshot:
       volume_id: "{{item.id}}"
       description: "Taken on {{ ansible_date_time.date }}"
   #     snapshot_tags:
   #         frequency: hourly
   # with_items: "{{ aws_ec2_vol_setting }}"
-  
