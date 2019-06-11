@@ -3,6 +3,7 @@
   hosts: all
   become: yes
   become_user: root
-- ec2_snapshot:
-    volume_id: "{{vol-abcdef12}}"
-    description: snapshot of /data from Amazon ECE2 taken 2019/06/11 12:18:32
+  tasks:
+    - ec2_snapshot:
+      volume_id: "{{vol-abcdef12}}"
+      description: snapshot of /data from Amazon ECE2 taken 2019/06/11 12:18:32
