@@ -1,7 +1,7 @@
 --- # This is for creating a s3 bucket
 - name: Create an s3 bucket
   hosts: localhost
-    aws_s3:
-       bucket: "{{mybucket}}"
-       mode: "{{create}}"
-       permission: public-read
+  aws_s3:
+    bucket: "{{mybucket}}"
+    mode: "{{create}}"
+    permission: public-read
