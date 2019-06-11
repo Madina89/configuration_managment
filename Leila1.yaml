@@ -5,7 +5,7 @@
   become_user: root
   gather_facts: False
   tasks:
-  - local_action:
+  local_action:
      ec2_snapshot:
      volume_id: “{{vol-3bca8f4d}}”
      description: “{{snapshot of volume}}”
