@@ -1,12 +1,12 @@
 - hosts: all
-  # connection: local
+  connection: local
   become: yes
   become_method: sudo
   gather_facts: yes
-  # any_errors_fatal: True
+  any_errors_fatal: True
 
 - name: Take snapshots of all volume"
-  local_action:
+  # local_action:
   ec2_snapshot:
       volume_id: "{{item.id}}"
       description: "Taken on {{ ansible_date_time.date }}"
