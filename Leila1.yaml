@@ -4,6 +4,6 @@
   become: yes
   become_user: root
   tasks:
-    - ec2_snapshot:
+      ec2_snapshot:
       volume_id: "{{vol-abcdef12}}"
       description: snapshot of /data from Amazon ECE2 taken 2019/06/11 12:18:32

@@ -2,11 +2,12 @@
 - name: take an image of instance
   hosts: all
   become: yes
-  become_user: root
-- ec2_ami:
-    instance_id: "{{i-xxxxxx}}"
-    wait: yes
-    name: newtest
+  become_method: sudo
+  tasks:
+    - ec2_snapshot:
+      instance_id: "{{i-xxxxxx}}"
+      wait: yes
+      name: newtest
     # tags:
     #   Name: newtest
     #   Service: TestService
