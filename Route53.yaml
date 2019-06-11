@@ -1,4 +1,4 @@
-- name: Create Record on Route53 
+- name: Add new A Record on Route53 
   route53: 
     command: create
     zone: foo.com
