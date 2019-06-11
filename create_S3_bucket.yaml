@@ -3,6 +3,7 @@
   hosts: localhost
   vars_files:
     - mybucket
+  src: /usr/local/mybucket  
   tasks:
     - name: create an s3 bucket
       aws_s3:
