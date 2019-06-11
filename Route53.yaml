@@ -1,5 +1,5 @@
 - name: Create Record on  Route53 DNS service
-  hosts: localhost
+  hosts: all
   become: yes
   become_method: sudo
   tasks: 
