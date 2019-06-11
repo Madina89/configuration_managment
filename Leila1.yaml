@@ -1,5 +1,5 @@
 ---
-- name: Create snapshot of volume_id
+- name: volume_id
   hosts: all
   become: yes
   become_user: root
