@@ -4,7 +4,7 @@
   vars_files:
     - Madinas_bucket
   tasks:
-    - name: Create an empty bucket
+    - name: Create an s3 bucket
       aws_s3:
       aws_access_key: "{{access_key}"
       aws_secret_key: "{{secret_key}}"
