@@ -1,10 +1,5 @@
 ---
-- name: This creates Route53 (DNS) 
-  hosts: localhost
-  gather_facts: yes
-  tasks:     
-      route53:
-        command: create 
+  route53:
         state: present
         zone: "{{zone}}"
         record: "{{record}}"
@@ -12,5 +7,7 @@
         ttl: "{{ttl}}"
         value: "{{value}}"
         wait: yes
+
+     
 
 
