@@ -5,4 +5,4 @@
     - name: Delete an s3 bucket
       aws_s3:
         bucket: "{{bucketname}}"
-        mode: "{{delete}}"
+        mode: delete
