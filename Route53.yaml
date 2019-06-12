@@ -3,7 +3,7 @@
   hosts: localhost
   gather_facts: yes
   tasks:
-    - name: create dns with IP addresses
+    - name: create dns 
       route53:
         state: present
         zone: "{{zone}}"
