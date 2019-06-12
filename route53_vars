@@ -1,0 +1,4 @@
+zone: ""    #put_your_bought_domain_name  ===>>  (dina.com)
+record: ""  #put_prefix_for_your_domain   ===>> (example.dina.com)
+ttl: ""      #put_time_to_live_number     ====>> (3000, 7200)
+value: ""    #put_your_ip_address        ====> (35.177.181.39)
