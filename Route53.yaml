@@ -1,10 +1,16 @@
-- name: Add new A Record on Route53 
-  route53: 
-    command: create
-    zone: foo.com
-    record: new.foo.com
-    type: A
-    ttl: 7200
-    value: 1.1.1.1,2.2.2.2,3.3.3.3
+---
+- name: this creates Route53 (DNS) with your help
+  hosts: localhost
+  gather_facts: yes
+  tasks:
+    - name: create dns with IP addresses
+      route53:
+        state: present
+        zone: "{{zone}}"
+        record: "{{record}}"
+        type: A
+        ttl: "{{ttl}}"
+        value: "{{value}}"
+        wait: yes
 
 
