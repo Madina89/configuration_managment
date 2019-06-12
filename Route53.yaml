@@ -1,9 +1,9 @@
 ---
-- name: this creates Route53 (DNS) with your help
+- name: Creates Route53 (DNS) 
   hosts: localhost
   gather_facts: yes
   tasks:
-    - name: create dns with IP addresses
+    - name: Create DNS 
       route53:
         state: present
         zone: "{{zone}}"

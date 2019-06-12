@@ -4,5 +4,5 @@
   tasks:
     - name: Delete an s3 bucket
       aws_s3:
-        bucket: "{{bucketname}}"
+        bucket: "{{madinasbucket123}}"
         mode: "{{delete}}"
