@@ -1,14 +1,12 @@
 ---
-- name: It will take a snapshot of your volume
-  hosts: localhost
-  gather_facts: yes
-  vars_files: Create ec2 snapshot
+- name: Create a snapshot on existing volume
+  hosts: all
+  become: yes
+  become_user: root
   tasks:
-    - name: this will use volume_id
-      ec2_snapshot:
-        region: "{{region}}"
-        ec2_url: "{{ec2_url}}"
-        volume_id: "{{volume_id}}"
-        description: "{{description}}"
-        snapshot_tags:
-            frequency: "{{frequency}}"
+    - name: create a snapshot on exisitng volume
+      local_action:
+        module: ec2_snapshot
+        volume_id: "{{volume_id}}"                               #volume ID of CentOS7 Machine.
+        region: "{{region}}"                                  #name of region where my volume is located.
+        description: "{{description}}"         # giving description or naming convention for my snapshot
