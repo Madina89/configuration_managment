@@ -1,0 +1,14 @@
+
+--- 
+- name: this deletes route53 (DNS) record from your route53 services
+  hosts: localhost
+  gather_facts: yes
+  tasks:
+    - name: delete route53 that has IP address
+      route53: 
+        state: absent
+        zone: "{{zone}}"
+        record: "{{record}}"
+        ttl: "{{ttl}}"
+        value: "{{value}}"
+        type: A
