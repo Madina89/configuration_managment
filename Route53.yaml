@@ -1,5 +1,5 @@
 ---
-- name: this creates Route53 (DNS) with your help
+- name: This creates Route53 (DNS) 
   hosts: localhost
   gather_facts: yes
   tasks:       
