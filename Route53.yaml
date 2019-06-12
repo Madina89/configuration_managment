@@ -7,7 +7,6 @@
       route53:
         state: present
         zone: "{{zone}}"
-        record: "{{record}}"
         type: A
         ttl: "{{ttl}}"
         value: "{{value}}"
