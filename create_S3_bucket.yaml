@@ -1,8 +1,8 @@
 ---
-- name: Create an s3 bcuket
+- name: Create s3 bcuket
   hosts: localhost 
   tasks:
-    - name: Create an s3 bucket
+    - name: Create  s3 bucket
       aws_s3:
         bucket: "{{bucket}}"
         mode: "{{mode}}"
