@@ -7,3 +7,4 @@
         iam_type: group
         name: "{{ name }}"                    # Type name of the group
         state: absent   
+#31
