@@ -14,7 +14,7 @@
       - mariadb-server
       - php-mysql
       - php-fpm
-    ignore_errors: true
+  ignore_errors: true
 
 - name: Download wordpress Package
   get_url:
@@ -38,7 +38,7 @@
 - name: started  httpd
   systemd:
      name: httpd
-     state: restarted  
+     state: started  
      enabled: yes
      become: yes
      become_method: sudo
