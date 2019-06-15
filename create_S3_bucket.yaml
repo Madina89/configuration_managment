@@ -4,7 +4,7 @@
   tasks:
     - name: Create an s3 bucket
       aws_s3:
-        bucket: "{{bucketname}}"
+        bucket: "{{bucket}}"
         mode: "{{mode}}"
         
     
