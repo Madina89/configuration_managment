@@ -1,0 +1,10 @@
+---
+- name: Test playbook for role 
+  hosts: localhost
+  become: yes
+  become_user: root
+  roles:
+    - package
+    - centos7-wordpress
+    - r1soft
+    - nagios_nrpe_server
