@@ -3,4 +3,4 @@
 - name: Install package from role
   package:
     name: httpd
-    state: prasent
+    state: present
