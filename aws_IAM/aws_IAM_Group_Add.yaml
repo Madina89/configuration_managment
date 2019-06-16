@@ -1,6 +1,6 @@
 ---
 - name: IAM group add
-  hosts: localhost
+  hosts: localhost/all
   tasks:
     - name: IAM group add 
       iam:
