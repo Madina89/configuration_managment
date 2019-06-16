@@ -1,6 +1,6 @@
 ---
 - name: Install filebeat
-  hosts: all
+  hosts: all/localhost
   become: yes
   become_user: root
   tasks:
