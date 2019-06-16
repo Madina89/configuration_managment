@@ -6,3 +6,5 @@
   tasks:
     - name: Zip /var/log
       shell: "find /var/log/httpd/ -type f -name *.log  -mtime -1 -size +10G -exec gzip -9 {} \\; "
+
+      
