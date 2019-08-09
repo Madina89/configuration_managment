@@ -5,6 +5,6 @@
   become_user: root
   tasks:
     - name: Zip /var/log
-      shell: "find /var/log/httpd/ -type f -name *.log  -mtime -1 -size +10G -exec gzip -9 {} \\; "
+      shell: "find /var/log/httpd/ -type f -name *.log  -mtime -1 -size +15G -exec gzip -9 {} \\; "
 
       
