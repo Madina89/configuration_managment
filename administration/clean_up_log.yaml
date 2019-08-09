@@ -5,4 +5,4 @@
   become_user: root
   tasks:
   - name: Zip /var/log
-    command: "find /var/log/httpd/ -type f -name *.log -mtime +15 -exec tar -xcvf -9 {} \ ; "
+    command: "find /var/log/httpd/ -type f -name *.log -mtime +15 -exec gzip.* -9 {} \ ; "
